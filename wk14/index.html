@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Confirmation Status</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>User Confirmation Status</h2>
+  <button onclick="startConfirmation()">Click to Start Confirmation</button>
+  <div class="status-container">
+    <p id="status">User confirmation status: </p>
+  </div>
+
+  <script>
+    function startConfirmation() {
+      let isUserReady = confirm("Are you ready?");
+      console.log(isUserReady);
+
+      document.getElementById("status").textContent = "User confirmation status: " + isUserReady;
+
+      if (isUserReady) {
+        alert("User ready!");
+      } else {
+        alert("User is not ready and is eating.");
+      }
+    }
+  </script>
+</body>
+</html>
